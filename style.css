@@ -1,0 +1,196 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    html {
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+    }
+
+    body {
+        font-family: "Roboto", sans-serif;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    img {
+        max-width: 100%;
+
+        display: block;
+        object-fit: cover;
+    }
+
+    .nav {
+        background-color: cornflowerblue;
+
+    }
+
+    .nav>ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: aliceblue;
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .nav a:hover {
+        background-color: antiquewhite;
+        color: black;
+        transition: 500ms;
+        border-radius: 10px;
+    }
+
+    /* timeplan */
+
+    .timeplan {
+        border-collapse: collapse;
+    }
+
+    .timeplan th,
+    .timeplan td {
+        border: solid black 1px;
+        padding: 10px;
+    }
+
+    /* timeplan */
+
+    /* interesser */
+
+    .interesser-section {
+        border: solid black 2px;
+        border-radius: 20px;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .interesser-section>* {
+        border: solid black 2px;
+        height: 50vh;
+        flex: 1;
+    }
+
+    .interesser-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .reise-card,
+    .mat-card {
+        border-radius: 20px;
+        display: flex;
+        padding: 10px;
+        flex: 1 1 33%;
+        /* align-items: center; */
+        justify-content: space-between;
+        transition: flex-grow 0.8s ease, flex-basis 0.8s ease, tranform 0.8s ease;
+    }
+
+    .mat2 {
+        flex: 1 1 600px;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .reise2 {
+        flex: 1 1 600px;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .mat-card:hover,
+    .reise-card:hover {
+        transition: 1.5s;
+        flex-grow: 30;
+    }
+
+    /* interesser */
+
+
+    /* bilde-galleri */
+
+    .galleri-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* To kolonner, faller til én på små skjermer */
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .mat,
+    .reiser {
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        /* hindrer bilder i å stikke utenfor */
+        transition: all 0.4s ease;
+    }
+
+    .mat h2,
+    .reiser h2 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .bilde-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 kolonner */
+        gap: 20px;
+        width: 100%;
+        transition: all 0.4s ease;
+        /* smooth reflow */
+    }
+
+    .bilde-grid img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: all 0.4s ease;
+        /* smooth zoom og reflow */
+        cursor: pointer;
+    }
+
+    /* Når du hover på hele grid: gjør alle litt mindre */
+    .bilde-grid:hover img {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+
+    /* Når du hover på ett bilde: gjør det større, resten justerer seg smooth */
+    .bilde-grid img:hover {
+        transform: scale(1.5);
+        opacity: 1;
+        z-index: 2;
+    }
+
+    /* Forhindrer at noe stikker ut under zoom */
+    .bilde-grid {
+        overflow: hidden;
+    }
+
+    /* bilde-galleri */
