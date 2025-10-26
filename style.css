@@ -12,7 +12,7 @@
     }
 
     body {
-        background-color: rgb(120, 103, 81);
+        background-color: rgb(40, 54, 24);
         font-family: "Roboto", sans-serif;
     }
 
@@ -29,19 +29,20 @@
     }
 
     .nav {
-        background-color: rgba(255, 162, 55, 0.719);
-
+        background-color: rgb(188, 108, 37);
+        padding: 10px;
     }
 
     .nav>ul {
         display: flex;
         justify-content: space-around;
         padding: 10px;
+        
     }
 
     .nav a {
         text-decoration: none;
-        color: aliceblue;
+        color: rgb(254, 250, 224);
         font-size: 30px;
         padding: 10px;
     }
@@ -51,6 +52,7 @@
         color: black;
         transition: 500ms;
         border-radius: 10px;
+        cursor: pointer;
     }
 
     /* timeplan */
@@ -60,6 +62,7 @@
         border-collapse: collapse;
         width: 90%;
         height: 70vh;
+        color: rgb(254, 250, 224);
         font-size: 1.1rem;
     }
 
@@ -69,6 +72,71 @@
         border: solid black 1px;
         padding: 10px;
     }
+
+    .dag {
+
+        background-color: rgb(71, 83, 27);
+    }
+
+    .partall{
+        background-color: rgb(69, 33, 3);
+    }
+
+    .oddetall{
+        background-color: rgb(65, 72, 51);
+    }
+
+    .tid {
+        background-color: rgb(96, 108, 56);
+    }
+    .ingen-timer{
+        color: black;
+        background-color: rgb(215, 190, 130);
+    }
+
+    .matte{
+        background-color: rgb(188, 108, 37);
+    }
+
+    .kjemi{
+        background-color: rgb(221, 161, 94);
+    }
+
+    .it{
+        background-color: rgb(153, 88, 42);
+    }
+
+    .fysikk{
+        background-color: rgb(147, 102, 57);
+    }
+
+    .spansk{
+        background-color: rgb(67, 40, 24);
+    }
+
+    .historie{
+        background-color: rgb(187, 148, 87);
+    }
+
+    .lunsj{
+        color: black;
+        background-color: rgb(255, 230, 167);
+    }
+
+    .gym{
+        
+        background-color: rgb(111, 29, 27);
+    }
+
+    .norsk{
+        background-color: rgb(127, 79, 36);
+    }
+
+    .klassens-time{
+        background-color: rgb(166, 138, 100);
+    }
+
+
 
     /* timeplan */
 
@@ -99,7 +167,7 @@
 
     .reise-card,
     .mat-card {
-        background-color: burlywood;
+        background-color: rgb(221, 161, 94);
         border-radius: 20px;
         display: flex;
         padding: 10px;
@@ -134,7 +202,7 @@
     /* bilde-galleri */
 
     .galleri-section {
-        background-color: rgb(120, 103, 81);
+        background-color: rgb(40, 54, 24);
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
@@ -143,7 +211,7 @@
 
     .mat,
     .reiser {
-        background-color: rgb(186, 136, 65);
+        background-color: rgb(221, 161, 94);
         border: 2px solid black;
         border-radius: 20px;
         padding: 20px;
@@ -156,14 +224,14 @@
 
     .mat h2,
     .reiser h2 {
-        background-color: rgb(186, 136, 65);
+        background-color: rgb(221, 161, 94);
         color: black;
         text-align: center;
         margin-bottom: 15px;
     }
 
     .bilde-grid {
-        background-color: rgb(186, 136, 65);
+        background-color: rgb(221, 161, 94);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
 
@@ -176,8 +244,6 @@
         height: 300px;
         object-fit: cover;
         border-radius: 10px;
-        transition: all 0.4s ease;
-        cursor: pointer;
     }
 
     .bilde-grid {
