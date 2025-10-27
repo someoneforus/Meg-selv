@@ -28,6 +28,7 @@
         object-fit: cover;
     }
 
+    /* Navbar */
     .nav {
         background-color: rgb(188, 108, 37);
         padding: 10px;
@@ -37,7 +38,7 @@
         display: flex;
         justify-content: space-around;
         padding: 10px;
-        
+
     }
 
     .nav a {
@@ -54,6 +55,14 @@
         border-radius: 10px;
         cursor: pointer;
     }
+
+    @media (width<900px){
+        .nav a{
+            font-size: 20px;
+        }
+    }
+
+    /* Navbar */
 
     /* timeplan */
 
@@ -78,61 +87,62 @@
         background-color: rgb(71, 83, 27);
     }
 
-    .partall{
+    .partall {
         background-color: rgb(69, 33, 3);
     }
 
-    .oddetall{
+    .oddetall {
         background-color: rgb(65, 72, 51);
     }
 
     .tid {
         background-color: rgb(96, 108, 56);
     }
-    .ingen-timer{
+
+    .ingen-timer {
         color: black;
         background-color: rgb(215, 190, 130);
     }
 
-    .matte{
+    .matte {
         background-color: rgb(188, 108, 37);
     }
 
-    .kjemi{
+    .kjemi {
         background-color: rgb(221, 161, 94);
     }
 
-    .it{
+    .it {
         background-color: rgb(153, 88, 42);
     }
 
-    .fysikk{
+    .fysikk {
         background-color: rgb(147, 102, 57);
     }
 
-    .spansk{
+    .spansk {
         background-color: rgb(67, 40, 24);
     }
 
-    .historie{
+    .historie {
         background-color: rgb(187, 148, 87);
     }
 
-    .lunsj{
+    .lunsj {
         color: black;
         background-color: rgb(255, 230, 167);
     }
 
-    .gym{
-        
+    .gym {
+
         background-color: rgb(111, 29, 27);
     }
 
-    .norsk{
+    .norsk {
         background-color: rgb(127, 79, 36);
     }
 
-    .klassens-time{
+    .klassens-time {
         background-color: rgb(166, 138, 100);
     }
 
@@ -196,6 +206,20 @@
         flex-grow: 30;
     }
 
+    @media (width<900px) {
+
+        .mat-card,
+        .reise-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mat-card:hover,
+        .reise-card:hover {
+            flex-grow: 1;
+        }
+    }
+
     /* interesser */
 
 
@@ -248,6 +272,22 @@
 
     .bilde-grid {
         overflow: hidden;
+    }
+
+    @media (width<900px) {
+        .mat {
+            grid-area: mat;
+        }
+
+        .reiser {
+            grid-area: reiser;
+        }
+
+        .galleri-section {
+            grid-template-areas:
+                "mat"
+                "reiser";
+        }
     }
 
     /* bilde-galleri */
