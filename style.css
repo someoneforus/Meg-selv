@@ -69,7 +69,7 @@
 
     .pot {
         width: auto;
-        height: 850px;
+        height: 750px;
         border-radius: 15px;
     }
 
@@ -79,37 +79,36 @@
     }
 
     .velkommen {
-        background-color: rgb(96, 108, 56);
+        background-image: url(./bilder/Potrait4.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+
         color: rgb(254, 250, 224);
 
         display: grid;
         grid-template-areas:
-            "velkommen1 velkommen2"
+            "velkommen1"
         ;
-        gap: 10px;
-        padding: 10px;
+        gap: 15px;
+        padding: 60px;
     }
 
-    .velkommen1 {
-        grid-area: velkommen1;
-        display: grid;
-    }
-
-    .bilder {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-    }
-
-    .velkommen1 h1 {
+    .velkommen1 h1{
         font-size: 75px;
         text-align: center;
+        padding-bottom: 25px;
     }
 
-    .velkommen2 {
-        grid-area: velkommen2;
-    }
+    .velkommen1 [
+        
+    ]
 
+    .fun{
+        grid-area: fun;
+    }
 
     /* hero */
 
@@ -119,16 +118,16 @@
         margin: 40px auto;
         border-collapse: collapse;
         width: 90%;
-        height: 70vh;
+        height: 80vh;
         color: rgb(254, 250, 224);
-        font-size: 1.1rem;
+        font-size: 20px;
     }
 
     .timeplan th,
     .timeplan td {
         text-align: center;
         border: solid black 1px;
-        padding: 10px;
+        padding: 12px;
     }
 
     .dag {
@@ -195,6 +194,19 @@
         background-color: rgb(166, 138, 100);
     }
 
+    @media(width<900px) {
+        .timeplan {
+            height: 60vh;
+            padding: 2px;
+        }
+
+        .timeplan th,
+        .timeplan td {
+            padding: 2px;
+            font-size: 10px;
+        }
+    }
+
 
 
     /* timeplan */
@@ -205,6 +217,8 @@
         display: flex;
         gap: 30px;
         padding: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
         flex-wrap: wrap;
     }
 
@@ -255,13 +269,19 @@
 
     @media (width<900px) {
 
+        .interesser-section {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
         .mat-card,
         .reise-card {
             display: flex;
             flex-direction: column;
         }
 
-        .mat2 img, .reise2 img{
+        .mat2 img,
+        .reise2 img {
             aspect-ratio: 1/1;
         }
 
@@ -282,6 +302,8 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
         padding: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     .mat,
@@ -338,7 +360,39 @@
             grid-template-areas:
                 "mat"
                 "reiser";
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 
     /* bilde-galleri */
+
+    /* footer */
+    footer {
+        gap: 10px;
+        padding: 10px;
+        color: rgb(254, 250, 224);
+        background-color: rgb(65, 72, 51);
+    }
+
+    footer h1 {
+        text-align: right;
+        padding-bottom: 10px;
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+    }
+
+    footer a {
+        color: rgb(254, 250, 224);
+    }
+
+    footer p {
+        text-align: center;
+    }
+
+
+    /* footer */
