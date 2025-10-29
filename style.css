@@ -23,12 +23,13 @@
 
     img {
         max-width: 100%;
+        max-height: 100%;
 
         display: block;
         object-fit: cover;
     }
 
-    /* Navbar */
+    /* navbar */
     .nav {
         background-color: rgb(188, 108, 37);
         padding: 10px;
@@ -56,13 +57,61 @@
         cursor: pointer;
     }
 
-    @media (width<900px){
-        .nav a{
+    @media (width<900px) {
+        .nav a {
             font-size: 20px;
         }
     }
 
-    /* Navbar */
+    /* navbar */
+
+    /* hero */
+
+    .pot {
+        width: auto;
+        height: 850px;
+        border-radius: 15px;
+    }
+
+    main img {
+        width: 300px;
+        border-radius: 15px;
+    }
+
+    .velkommen {
+        background-color: rgb(96, 108, 56);
+        color: rgb(254, 250, 224);
+
+        display: grid;
+        grid-template-areas:
+            "velkommen1 velkommen2"
+        ;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .velkommen1 {
+        grid-area: velkommen1;
+        display: grid;
+    }
+
+    .bilder {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .velkommen1 h1 {
+        font-size: 75px;
+        text-align: center;
+    }
+
+    .velkommen2 {
+        grid-area: velkommen2;
+    }
+
+
+    /* hero */
 
     /* timeplan */
 
@@ -153,11 +202,9 @@
     /* interesser */
 
     .interesser-section {
-        border: solid black 2px;
-        border-radius: 20px;
         display: flex;
-        gap: 10px;
-        padding: 10px;
+        gap: 30px;
+        padding: 20px;
         flex-wrap: wrap;
     }
 
@@ -212,6 +259,10 @@
         .reise-card {
             display: flex;
             flex-direction: column;
+        }
+
+        .mat2 img, .reise2 img{
+            aspect-ratio: 1/1;
         }
 
         .mat-card:hover,
