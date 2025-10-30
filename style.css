@@ -161,21 +161,48 @@
         padding: 10px;
     }
 
-    @media(width<900px){
-        .info{
-            grid-template-areas: 
-            "tekst1"
-            "bilde1"
-            "tekst2"
-            "bilde2";
+    @media (max-width: 900px) {
+        .info {
+            grid-template-areas:
+                "tekst1"
+                "bilde1"
+                "tekst2"
+                "bilde2";
+            padding: 20px;
+            gap: 30px;
         }
 
-        .tekst1, .tekst2{
+        .tekst1,
+        .tekst2 {
             font-size: 20px;
+            width: 90%;
+            margin: 0 auto;
         }
 
-        
+        .bilde1,
+        .bilde2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+
+        .bildebox {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .info img {
+            width: 80%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 15px;
+        }
     }
+
 
     /* hero */
 
@@ -247,6 +274,59 @@
         transition: 0.8s;
         scale: 1.2;
     }
+
+    @media (max-width: 900px) {
+        .fam-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "card1 card2"
+                "card3 card3";
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+            position: static;
+            height: auto;
+            padding: 20px;
+        }
+
+        .fam-card:nth-child(1) {
+            grid-area: card1;
+            transform: none !important;
+            position: static;
+        }
+
+        .fam-card:nth-child(2) {
+            grid-area: card2;
+            transform: none !important;
+            position: static;
+        }
+
+        .fam-card:nth-child(3) {
+            grid-area: card3;
+            transform: none !important;
+            position: static;
+            width: 90%;
+        }
+
+        .fam-card {
+            width: 90%;
+            max-width: 350px;
+            scale: 1;
+            transition: 0.3s;
+        }
+
+        .fam-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+        
+        .fam-container:hover .fam-card {
+            transform: none;
+        }
+    }
+
 
     /* familie */
 
