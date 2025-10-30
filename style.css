@@ -53,7 +53,6 @@
     .nav a:hover {
         background-color: rgb(231, 188, 123);
         color: black;
-        transition: 500ms;
         border-radius: 10px;
         cursor: pointer;
     }
@@ -111,6 +110,7 @@
             "bilde1 tekst1"
             "tekst2 bilde2";
         padding: 50px 75px 0px;
+        gap: 20px;
     }
 
     .info img {
@@ -127,26 +127,60 @@
         grid-area: bilde2;
     }
 
-    .moviebox {
+    .bildebox {
         display: flex;
         flex-direction: row-reverse;
     }
 
-    .moviebox img {
+    .bildebox img {
         padding: 10px;
     }
 
     .tekst1 {
         grid-area: tekst1;
         background-color: rgb(71, 83, 27);
-        width: 500px;
+        color: rgb(254, 250, 224);
     }
 
     .tekst2 {
         grid-area: tekst2;
         background-color: rgb(215, 190, 130);
-        width: 500px;
     }
+
+    .tekst1,
+    .tekst2 {
+        border-radius: 25px;
+        font-size: 30px;
+        padding: 20px;
+        width: 600px;
+        margin: 30px auto;
+    }
+
+    .tekst1 *,
+    .tekst2 * {
+        padding: 10px;
+    }
+
+    @media(width<900px){
+        .info{
+            grid-template-areas: 
+            "tekst1"
+            "bilde1"
+            "tekst2"
+            "bilde2";
+        }
+
+        .tekst1, .tekst2{
+            font-size: 20px;
+        }
+
+        
+    }
+
+    /* hero */
+
+
+    /* familie */
 
     .familie {
         background-color: rgb(187, 148, 87);
@@ -209,13 +243,13 @@
         transform: translateX(450px) rotate(0deg);
     }
 
-    .fam-card:hover{
+    .fam-card:hover {
         transition: 0.8s;
         scale: 1.2;
     }
-    
 
-    /* hero */
+    /* familie */
+
 
     /* timeplan */
 
