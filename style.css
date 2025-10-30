@@ -47,6 +47,7 @@
         color: rgb(254, 250, 224);
         font-size: 30px;
         padding: 10px;
+        transition: all 0.5s ease;
     }
 
     .nav a:hover {
@@ -75,7 +76,7 @@
 
     main img {
         width: 300px;
-        border-radius: 15px;
+        border-radius: 20px;
     }
 
     .velkommen {
@@ -91,24 +92,128 @@
         display: grid;
         grid-template-areas:
             "velkommen1"
+            "info"
         ;
         gap: 15px;
         padding: 60px;
     }
 
-    .velkommen1 h1{
+    .velkommen1 h1 {
         font-size: 75px;
         text-align: center;
         padding-bottom: 25px;
     }
 
-    .velkommen1 [
-        
-    ]
-
-    .fun{
-        grid-area: fun;
+    .info {
+        grid-area: info;
+        display: grid;
+        grid-template-areas:
+            "bilde1 tekst1"
+            "tekst2 bilde2";
+        padding: 50px 75px 0px;
     }
+
+    .info img {
+        width: auto;
+        height: 500px;
+    }
+
+    .bilde1 {
+        padding: 10px;
+        grid-area: bilde1;
+    }
+
+    .bilde2 {
+        grid-area: bilde2;
+    }
+
+    .moviebox {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .moviebox img {
+        padding: 10px;
+    }
+
+    .tekst1 {
+        grid-area: tekst1;
+        background-color: rgb(71, 83, 27);
+        width: 500px;
+    }
+
+    .tekst2 {
+        grid-area: tekst2;
+        background-color: rgb(215, 190, 130);
+        width: 500px;
+    }
+
+    .familie {
+        background-color: rgb(187, 148, 87);
+        margin-top: 75px;
+        padding: 40px 10px;
+        text-align: center;
+    }
+
+    .familie h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 40px;
+    }
+
+    .fam-container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: 500px;
+        padding: 20px;
+    }
+
+    .fam-card {
+        background-color: rgb(254, 250, 224);
+        border: solid black 2px;
+        padding: 20px;
+        text-align: center;
+        position: absolute;
+        transition: all 1s ease;
+    }
+
+    .fam-card img {
+        border: solid black 2px;
+        border-radius: 0px;
+        aspect-ratio: 1/1;
+        margin-bottom: 15px;
+    }
+
+    .fam-card:nth-child(1) {
+        transform: translateX(-30px) rotate(-5deg);
+    }
+
+    .fam-card:nth-child(2) {
+        transform: translateX(0px) rotate(0deg);
+    }
+
+    .fam-card:nth-child(3) {
+        transform: translateX(30px) rotate(5deg);
+    }
+
+    .fam-container:hover .fam-card:nth-child(1) {
+        transform: translateX(-450px) rotate(0deg);
+    }
+
+    .fam-container:hover .fam-card:nth-child(2) {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    .fam-container:hover .fam-card:nth-child(3) {
+        transform: translateX(450px) rotate(0deg);
+    }
+
+    .fam-card:hover{
+        transition: 0.8s;
+        scale: 1.2;
+    }
+    
 
     /* hero */
 
@@ -216,9 +321,7 @@
     .interesser-section {
         display: flex;
         gap: 30px;
-        padding: 20px;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding: 20px 50px;
         flex-wrap: wrap;
     }
 
@@ -244,7 +347,7 @@
         padding: 10px;
         flex: 1 1 33%;
         justify-content: space-between;
-        transition: flex-grow 0.8s ease, flex-basis 0.8s ease, tranform 0.8s ease;
+        transition: all 0.8s ease;
     }
 
     .mat2 {
@@ -270,8 +373,7 @@
     @media (width<900px) {
 
         .interesser-section {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding: 20px;
         }
 
         .mat-card,
@@ -301,9 +403,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
-        padding: 20px;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding: 20px 50px;
     }
 
     .mat,
@@ -360,8 +460,7 @@
             grid-template-areas:
                 "mat"
                 "reiser";
-            padding-left: 20px;
-            padding-right: 20px;
+            padding: 20px;
         }
     }
 
