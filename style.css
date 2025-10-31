@@ -1,4 +1,4 @@
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Sans:wght@200..800&display=swap');
 
     html {
         box-sizing: border-box;
@@ -9,11 +9,12 @@
         margin: 0;
         padding: 0;
         font-weight: normal;
+        font-family: "Momo Trust Sans", sans-serif;
     }
 
     body {
         background-color: rgb(40, 54, 24);
-        font-family: "Roboto", sans-serif;
+        min-height: 100vh;
     }
 
     ol,
@@ -30,6 +31,13 @@
     }
 
     /* navbar */
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 3;
+    }
+
     .nav {
         background-color: rgb(188, 108, 37);
         padding: 10px;
@@ -249,7 +257,7 @@
     }
 
     .fam-card:nth-child(1) {
-        transform: translateX(-30px) rotate(-5deg);
+        transform: translateX(-20px) rotate(-5deg);
     }
 
     .fam-card:nth-child(2) {
@@ -257,9 +265,8 @@
     }
 
     .fam-card:nth-child(3) {
-        transform: translateX(30px) rotate(5deg);
+        transform: translateX(20px) rotate(5deg);
     }
-
 
     .fam-container:hover .fam-card:nth-child(1) {
         transform: translateX(-300px) rotate(0deg);
@@ -271,19 +278,6 @@
 
     .fam-container:hover .fam-card:nth-child(3) {
         transform: translateX(300px) rotate(0deg);
-    }
-
-
-    .fam-card:nth-child(1) {
-        transform: translateX(-20px) rotate(-5deg);
-    }
-
-    .fam-card:nth-child(2) {
-        transform: translateX(0px) rotate(0deg);
-    }
-
-    .fam-card:nth-child(3) {
-        transform: translateX(20px) rotate(5deg);
     }
 
     .fam-card:hover {
@@ -441,7 +435,7 @@
         padding: 10px;
     }
 
-    .ranking h1{
+    .ranking h1 {
         font-size: 60px;
     }
 
@@ -458,7 +452,7 @@
         padding: 20px 0px;
     }
 
-    .fag-container>div{
+    .fag-container>div {
         border-radius: 20px;
         font-size: 40px;
         margin: 10px;
@@ -675,6 +669,77 @@
 
     /* bilde-galleri */
 
+
+    /* bucketlist */
+    .bucket-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bucket-container h1 {
+        font-size: 50px;
+    }
+
+    .bucket-card1 {
+        position: relative;
+        background-image: url(./bilder/japan.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+
+        height: 100vh;
+        color: rgb(254, 250, 224);
+        padding: 100px;
+    }
+
+    .bucket-card1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+
+    .bucket-card2 {
+        position: relative;
+        background-image: url(./bilder/skydive.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+
+        height: 100vh;
+        color: rgb(254, 250, 224);
+        padding: 100px;
+    }
+
+    .bucket-card2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+
+    .bucket-card1 h1,
+    .bucket-card1 p,
+    .bucket-card2 h1,
+    .bucket-card2 p {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* bucketlist */
+
     /* footer */
     footer {
         gap: 10px;
@@ -701,6 +766,5 @@
     footer p {
         text-align: center;
     }
-
 
     /* footer */
